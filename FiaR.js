@@ -20,7 +20,11 @@ const GameBoard = (() =>{
     const render = () => {
         let boardHTML = ""; 
         gameboard.forEach((round,index)=>{
-            boardHTML+=`<div class = "round" id="round-${index}">${round}</div>`
+            if (round){
+                boardHTML += `<div class="round" id="round-${index}"><div class="disc ${round}"></div></div>`;
+            } else {
+                boardHTML+=`<div class = "round" id="round-${index}">${round}</div>`
+            }
         })
         document.querySelector(".gameboard").innerHTML=boardHTML;
         const round = document.querySelectorAll(".round");
@@ -64,9 +68,6 @@ const Game = (()=>{
         players = [
             createPlayer(document.querySelector("#player1").value, "blue"),
             createPlayer(document.querySelector("#player2").value, "red"),
-            
-            //about the red/blue color what i could do is when i click
-            // create a div and this div will be added a class that adds a background color
             
         ]
 

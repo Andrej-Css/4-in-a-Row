@@ -42,4 +42,16 @@ body {
     
 }
 
+.disc {
+    width: 80%;
+    height: 80%;
+    border-radius: 50%;
+  }
 
+.red {
+    background-color: red;
+  }
+  
+  .blue {
+    background-color: blue;
+  }
